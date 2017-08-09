@@ -19,9 +19,6 @@
         <td><%= link_to 'Destroy', user_city_path(current_user.id, city.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <%  main = get_weather(city.name) %>
         <td><%= main["main"]["temp"] %></td>
-        <td><%= main["main"]["humidity"] %></td>
-        <td><%= main["main"]["temp_max"] %></td>
-        <td><%= main["main"]["temp_min"] %></td>
         <td><%= main["weather"][0]["main"]%></td>
         <td><%= main["weather"][0]["description"] %></td>
       </tr>
