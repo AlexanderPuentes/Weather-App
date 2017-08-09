@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cities</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cities.each do |city| %>
+      <tr>
+        <td><%= city.name %></td>
+        <td><%= link_to 'Show', user_cities_path %></td>
+        <td><%= link_to 'Edit', edit_user_city_path(current_user.id, city.id) %></td>
+        <td><%= link_to 'Destroy', user_city_path(current_user.id, city.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <%  main = get_weather(city.name) %>
+        <td><%= main["main"]["temp"] %></td>
+        <td><%= main["main"]["humidity"] %></td>
+        <td><%= main["main"]["temp_max"] %></td>
+        <td><%= main["main"]["temp_min"] %></td>
+        <td><%= main["weather"][0]["main"]%></td>
+        <td><%= main["weather"][0]["description"] %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New City', new_user_city_path(current_user.id) %>
