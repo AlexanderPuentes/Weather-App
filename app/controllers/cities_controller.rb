@@ -24,11 +24,11 @@ class CitiesController < ApplicationController
   # POST /cities
   # POST /cities.json
   def create
-    @city = City.new(city_params)
+    @city = current_user.cities.build(city_params)
 
     respond_to do |format|
       if @city.save
-        format.html { redirect_to @city, notice: 'City was successfully created.' }
+        format.html { redirect_to user_cities_path(current_user), notice: 'City was successfully created.' }
         format.json { render :show, status: :created, location: @city }
       else
         format.html { render :new }
