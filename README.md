@@ -6,4 +6,4 @@ This web-application allows a user to create a login and add as many cities arou
 
 Tech Used: Ruby on Rails, JavaScript, HTML, CSS, Bootstrap, Bcrypt, Open-Weather-map API, Rspec-rails
 
-Available through localhost
+Available through localhost.
