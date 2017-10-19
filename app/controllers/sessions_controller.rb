@@ -4,6 +4,7 @@ class SessionsController < ApplicationController
   end
 
   def create
+    # puts "password = #{params[:password]}"
     @user = User.find_by(username: params[:username]).try(:authenticate, params[:password])
     if @user
       session[:user_id] = @user.id
