@@ -1,7 +1,7 @@
 <% content_for :body_class, 'class1' %>
 
 <nav class="navbar navbar-inverse top-navigation">
-  <div class="container-fluid">
+  <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
         <span class="sr-only">Toggle navigation</span>
@@ -20,8 +20,8 @@
         <button type="submit" class="btn btn-default">Submit</button>
       </form> -->
       <ul class="nav navbar-nav navbar-right">
-        <button type="button" name="button" id="Login"><%= link_to 'Sign Up', '#', :'data-toggle'=> "modal", :'data-target'=>"#myModal123" %></button>
-        <button type="button" name="button" id="Login"><%= link_to 'Login', '#', :'data-toggle'=> "modal", :'data-target'=>"#loginModal" %></button>
+        <button class="button" type="button" name="button" id="Login"><%= link_to 'Sign Up', '#', :'data-toggle'=> "modal", :'data-target'=>"#myModal123" %></button>
+        <button class="button" type="button" name="button" id="Login"><%= link_to 'Login', '#', :'data-toggle'=> "modal", :'data-target'=>"#loginModal" %></button>
       </ul>
     </div>
   </div>
